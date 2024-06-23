@@ -1,0 +1,26 @@
+#include <iostream>
+#include <list>
+using namespace std;
+
+int main() {
+    //list<datatype> listname;
+    list<int> list1{1,2,3,4};
+    list<int> list2= {5,6,7,8};
+    list<int> list3{9,10,11,12,13};
+    
+    list<int>::iterator itr1= list1.begin();
+    auto itr2= list2.begin();
+    
+    cout<< *itr1 <<","<< *itr2<<endl; //1,5
+    
+    auto itr3_1= list3.end();
+    cout<< *itr3_1<<endl; //output is the value in location JUST AFTER THE END OF LIST3 (ie the location after last element) , here it is 5
+    auto itr3_2= list3.rbegin();
+    cout<< *itr3_2<<endl; //output is the first element after reversal of the list (ie the last element in the list) , here it is 13
+    
+    auto itr3_3= list3.rend();
+    cout<< *itr3_3<<endl; //output is the last element after reversal of the list (ie the location before first element) , here it is 5
+    
+
+    return 0;
+} 
