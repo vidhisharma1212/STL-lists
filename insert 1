@@ -10,7 +10,8 @@ int main() {
         cout<< ele<< " ";
     }
     cout<<endl;
-    
+
+//list_name.insert(iterator_name, value_to_be_inserted)
     auto itr1= l.begin();
     l.insert(itr1, 0);
     
